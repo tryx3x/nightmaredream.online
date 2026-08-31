@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nightmare Spire — текстовая RPG в Telegram: регионы, бой, Ранг и Класс души</title>
+<meta name="description" content="Nightmare Spire: восемь регионов мира Кошмаров, пошаговый бой, развитие через Ранг и Класс души, Запечатанные сущности, пять ремёсел, Гильдия наёмников и кланы. Играть можно прямо сейчас в Telegram.">
+<link rel="canonical" href="https://nightmaredream.online/nightmare-spire/">
+<meta name="theme-color" content="#0a090d">
+<meta name="color-scheme" content="dark">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Nightmare">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:title" content="Nightmare Spire — текстовая RPG в Telegram">
+<meta property="og:description" content="Восемь регионов, пошаговый бой, Ранг и Класс души, ремёсла, кланы. Играть можно прямо сейчас.">
+<meta property="og:url" content="https://nightmaredream.online/nightmare-spire/">
+<meta property="og:image" content="https://nightmaredream.online/assets/img/hero.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"VideoGame","name":"Nightmare Spire","url":"https://nightmaredream.online/nightmare-spire/","gamePlatform":"Telegram","applicationCategory":"Game","inLanguage":"ru","description":"Текстовая многопользовательская RPG о выживании в мире Кошмаров."},
+{"@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Главная","item":"https://nightmaredream.online/"},
+{"@type":"ListItem","position":2,"name":"Nightmare Spire","item":"https://nightmaredream.online/nightmare-spire/"}]}
+]}
+</script>
+</head>
+<body>
+
+
+<div style="min-height:100vh; background:#0a090d">
+
+<header id="c-header" style="position:sticky; top:0; z-index:40; background:linear-gradient(180deg, rgba(10,9,13,.92) 0%, rgba(10,9,13,.85) 55%, rgba(10,9,13,0) 100%); border-bottom:1px solid transparent; transition:background .35s ease, border-color .35s ease, backdrop-filter .35s ease">
+  <div style="max-width:1240px; margin:0 auto; padding:18px 32px; display:flex; align-items:center; gap:36px">
+    <a href="../index.html" style="font-family:Cardo, Georgia, serif; font-size:21px; letter-spacing:.02em; color:#f2efe9; white-space:nowrap">Nightmare</a>
+    <nav style="display:flex; align-items:center; gap:26px; margin-left:auto; font-size:13.5px; letter-spacing:.06em; text-transform:uppercase; color:#a6a09a">
+      <span style="position:relative">
+        <button data-act="games" style="display:inline-flex; align-items:center; gap:7px; padding:0 0 3px; background:transparent; border:none; cursor:pointer; font-family:inherit; font-size:13.5px; letter-spacing:.06em; text-transform:uppercase; color:#f2efe9; border-bottom:1px solid #b5544e" class="xh1">Игры <span style="opacity:.5">▾</span></button>
+        <span id="games-menu" hidden style="position:absolute; top:30px; left:-18px; z-index:60; display:flex; flex-direction:column; min-width:246px; padding:8px 0; background:rgba(13,12,17,.97); border:1px solid rgba(255,255,255,.12); box-shadow:0 18px 40px rgba(0,0,0,.5); animation:cardIn .28s both">
+          <a href="../nightmare-spire/index.html" style="display:flex; align-items:center; gap:9px; padding:11px 18px; font-size:14px; letter-spacing:0; text-transform:none; color:#e6e2db" class="xh2"><span style="width:6px; height:6px; border-radius:50%; background:#6fc98a"></span>Nightmare Spire</a>
+          <span style="display:grid; grid-template-columns:auto 1fr; gap:9px; align-items:baseline; padding:11px 18px; font-size:14px; letter-spacing:0; text-transform:none; color:#948e88"><span style="width:6px; height:6px; border-radius:50%; background:#7a736c; margin-top:6px"></span><span><span style="display:block; white-space:nowrap">Nightmare Dream</span><span style="display:block; margin-top:3px; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:#8d8781">в разработке</span></span></span>
+        </span>
+      </span>
+      <a href="../changelog/index.html" style="color:inherit" class="xh3">Обновления</a>
+    </nav>
+    <a href="https://t.me/nightmare_spire_mmorpg_bot" target="_blank" rel="noopener" style="padding:11px 22px; background:#a03f39; color:#fbf7f4; font-size:13px; letter-spacing:.1em; text-transform:uppercase; transition:background .25s ease, transform .25s cubic-bezier(.16,.84,.44,1)" class="xh4">Играть</a>
+  </div>
+</header>
+
+<section data-screen-label="Page hero" style="position:relative; overflow:hidden; border-bottom:1px solid rgba(255,255,255,.06)">
+  <div style="position:absolute; inset:0; background:#0b0a10 url('../assets/img/hero.png') center 38%/cover no-repeat"></div>
+  <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,9,13,.62) 0%, rgba(10,9,13,.72) 45%, rgba(10,9,13,.93) 82%, rgba(10,9,13,1) 100%)"></div>
+  <div style="position:absolute; left:-10%; right:-10%; bottom:-20%; height:70%; background:radial-gradient(45% 60% at 35% 70%, rgba(140,130,180,.14), rgba(0,0,0,0) 70%); filter:blur(20px); animation:fogDrift 34s ease-in-out infinite"></div>
+  <div style="position:relative; max-width:1240px; margin:0 auto; padding:88px 32px 76px">
+    <div style="display:flex; gap:10px; align-items:center; font-size:12.5px; letter-spacing:.04em; color:#8d8781; margin-bottom:30px">
+      <a href="../index.html" style="color:#8d8781" class="x504">Главная</a><span style="opacity:.5">/</span><span style="color:#c8c2bb">Nightmare Spire</span>
+    </div>
+    <span style="display:inline-flex; align-items:center; gap:9px; padding:7px 14px; border:1px solid rgba(111,201,138,.4); background:rgba(111,201,138,.08); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:#a9d6b5"><span style="width:6px; height:6px; border-radius:50%; background:#6fc98a; animation:pulseDot 2.6s ease-in-out infinite"></span>можно играть прямо сейчас</span>
+    <h1 style="margin:24px 0 0; font-family:Cardo, Georgia, serif; font-weight:400; font-size:clamp(44px,7vw,88px); line-height:1; letter-spacing:-.01em; color:#f6f3ed">Nightmare Spire</h1>
+    <p style="margin:24px 0 0; max-width:620px; font-size:19px; line-height:1.65; color:#b8b2ab; text-wrap:pretty">Текстовая многопользовательская RPG о выживании в мире Кошмаров. Вы исследуете регионы, растёте не уровнями, а качеством души, и живёте в мире, который помнит ваши победы и поражения.</p>
+    <div style="display:flex; gap:14px; margin-top:36px; flex-wrap:wrap">
+      <a href="https://t.me/nightmare_spire_mmorpg_bot" target="_blank" rel="noopener" style="padding:16px 30px; background:#a03f39; color:#fbf7f4; font-size:14px; font-weight:600; letter-spacing:.06em; text-transform:uppercase; transition:transform .25s cubic-bezier(.16,.84,.44,1), background .25s ease, box-shadow .25s ease" class="x505">Открыть бота в Telegram</a>
+      <a href="#start" style="padding:16px 30px; border:1px solid rgba(255,255,255,.22); color:#e6e2db; font-size:14px; letter-spacing:.06em; text-transform:uppercase" class="x506">Как начать</a>
+    </div>
+  </div>
+</section>
+
+<section id="start" data-reveal data-screen-label="How to start" style="padding:100px 0; background:#0d0c11; border-bottom:1px solid rgba(255,255,255,.06)">
+  <div style="max-width:1240px; margin:0 auto; padding:0 32px">
+    <p style="margin:0 0 10px; font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#d08b83">Первые шаги</p>
+    <h2 style="margin:0 0 48px; font-family:Cardo, Georgia, serif; font-weight:400; font-size:clamp(30px,4.2vw,50px); line-height:1.1; color:#f4f1eb">Как начать играть</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.08)">
+      <div style="background:#0d0c11; padding:34px 28px">
+        <div style="font-family:ui-monospace, 'Courier New', monospace; font-size:12px; letter-spacing:.14em; color:#d08b83">01</div>
+        <h3 style="margin:18px 0 10px; font-family:Cardo, Georgia, serif; font-weight:400; font-size:24px; color:#f2efe9">Откройте бота</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.65; color:#948e88">Вся игра живёт в Telegram: ничего скачивать и регистрировать не нужно.</p>
+      </div>
+      <div style="background:#0d0c11; padding:34px 28px">
+        <div style="font-family:ui-monospace, 'Courier New', monospace; font-size:12px; letter-spacing:.14em; color:#d08b83">02</div>
+        <h3 style="margin:18px 0 10px; font-family:Cardo, Georgia, serif; font-weight:400; font-size:24px; color:#f2efe9">Пробудитесь</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.65; color:#948e88">Первый Ранг, первое Ядро души и первый регион, из которого нужно найти выход.</p>
+      </div>
+      <div style="background:#0d0c11; padding:34px 28px">
+        <div style="font-family:ui-monospace, 'Courier New', monospace; font-size:12px; letter-spacing:.14em; color:#d08b83">03</div>
+        <h3 style="margin:18px 0 10px; font-family:Cardo, Georgia, serif; font-weight:400; font-size:24px; color:#f2efe9">Выйдите на охоту</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.65; color:#948e88">Первые бои, первые Осколки души и выбор: рискнуть дальше или вернуться в Цитадель.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mechanics" data-reveal data-screen-label="What awaits" style="padding:110px 0; border-bottom:1px solid rgba(255,255,255,.06)">
+  <div style="max-width:1240px; margin:0 auto; padding:0 32px">
+    <p style="margin:0 0 10px; font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#d08b83">Игра</p>
+    <h2 style="margin:0 0 14px; font-family:Cardo, Georgia, serif; font-weight:400; font-size:clamp(30px,4.2vw,50px); line-height:1.1; color:#f4f1eb">Что вас ждёт</h2>
+    <p style="margin:0 0 52px; max-width:620px; font-size:17px; line-height:1.7; color:#a6a09a; text-wrap:pretty">Четыре занятия, между которыми вы будете выбирать каждый вечер.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.08)">
+      <div style="background:#0d0c11; padding:34px 28px; transition:background .3s ease" class="x507">
+        <div style="font-size:11.5px; letter-spacing:.2em; text-transform:uppercase; color:#8d8781; margin-bottom:22px">Мир</div>
+        <h3 style="margin:0 0 10px; font-family:Cardo, Georgia, serif; font-weight:400; font-size:23px; color:#f2efe9">Исследование</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.65; color:#948e88">Восемь регионов со своими существами, ресурсами и событиями. Путь дальше нужно найти самому.</p>
+      </div>
+      <div style="background:#0d0c11; padding:34px 28px; transition:background .3s ease" class="x508">
+        <div style="font-size:11.5px; letter-spacing:.2em; text-transform:uppercase; color:#8d8781; margin-bottom:22px">Схватка</div>
+        <h3 style="margin:0 0 10px; font-family:Cardo, Georgia, serif; font-weight:400; font-size:23px; color:#f2efe9">Бой</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.65; color:#948e88">Ход за ходом, с питомцем рядом. Навстречу выходит от одного до трёх врагов.</p>
+      </div>
+      <div style="background:#0d0c11; padding:34px 28px; transition:background .3s ease" class="x509">
+        <div style="font-size:11.5px; letter-spacing:.2em; text-transform:uppercase; color:#8d8781; margin-bottom:22px">Ремесло</div>
+        <h3 style="margin:0 0 10px; font-family:Cardo, Georgia, serif; font-weight:400; font-size:23px; color:#f2efe9">Ремёсла</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.65; color:#948e88">Горное дело, кузница, броня, украшения и алхимия. У каждого ремесла свой риск.</p>
+      </div>
+      <div style="background:#0d0c11; padding:34px 28px; transition:background .3s ease" class="x510">
+        <div style="font-size:11.5px; letter-spacing:.2em; text-transform:uppercase; color:#8d8781; margin-bottom:22px">Люди</div>
+        <h3 style="margin:0 0 10px; font-family:Cardo, Georgia, serif; font-weight:400; font-size:23px; color:#f2efe9">Клан и город</h3>
+        <p style="margin:0; font-size:14.5px; line-height:1.65; color:#948e88">Цитадель, рынок, контракты Гильдии, свой дом и постройки клана.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-reveal data-screen-label="Growth" style="padding:110px 0; background:#0d0c11; border-bottom:1px solid rgba(255,255,255,.06)">
+  <div style="max-width:1240px; margin:0 auto; padding:0 32px; display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:start">
+    <div>
+      <p style="margin:0 0 10px; font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#d08b83">Развитие</p>
+      <h2 style="margin:0 0 20px; font-family:Cardo, Georgia, serif; font-weight:400; font-size:clamp(30px,4.2vw,50px); line-height:1.1; color:#f4f1eb">Никаких уровней</h2>
+      <p style="margin:0 0 30px; font-size:17px; line-height:1.7; color:#a6a09a; text-wrap:pretty">Растёт качество вашей души. Семь Рангов говорят о том, чего стоит ваше Ядро, семь Классов, о том, сколько Ядер вы носите.</p>
+      <div style="display:grid; gap:1px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.08)">
+        <div style="background:#0d0c11; padding:22px 24px; display:grid; grid-template-columns:130px 1fr; gap:20px; align-items:baseline">
+          <span style="font-family:Cardo, Georgia, serif; font-size:21px; color:#f2efe9">Ранг</span>
+          <span style="font-size:14.5px; line-height:1.6; color:#948e88">Качество Ядра души и уровень самого вашего существования.</span>
+        </div>
+        <div style="background:#0d0c11; padding:22px 24px; display:grid; grid-template-columns:130px 1fr; gap:20px; align-items:baseline">
+          <span style="font-family:Cardo, Georgia, serif; font-size:21px; color:#f2efe9">Класс</span>
+          <span style="font-size:14.5px; line-height:1.6; color:#948e88">Сколько Ядер души у вас есть.</span>
+        </div>
+        <div style="background:#0d0c11; padding:22px 24px; display:grid; grid-template-columns:130px 1fr; gap:20px; align-items:baseline">
+          <span style="font-family:Cardo, Georgia, serif; font-size:21px; color:#f2efe9">Осколок</span>
+          <span style="font-size:14.5px; line-height:1.6; color:#948e88">Остаётся с убитого существа.</span>
+        </div>
+        <div style="background:#0d0c11; padding:22px 24px; display:grid; grid-template-columns:130px 1fr; gap:20px; align-items:baseline">
+          <span style="font-family:Cardo, Georgia, serif; font-size:21px; color:#f2efe9">Фрагмент</span>
+          <span style="font-size:14.5px; line-height:1.6; color:#948e88">Появляется, когда вы поглощаете Осколок, и делает вас сильнее.</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p style="margin:0 0 10px; font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#d08b83">Спутник</p>
+      <h2 style="margin:0 0 20px; font-family:Cardo, Georgia, serif; font-weight:400; font-size:clamp(30px,4.2vw,50px); line-height:1.1; color:#f4f1eb">Запечатанные сущности</h2>
+      <p style="margin:0 0 26px; font-size:17px; line-height:1.7; color:#a6a09a; text-wrap:pretty">В Печати живёт кошмарное существо, которое растёт вместе с вами и в бою действует по своей воле.</p>
+      <ul style="margin:0; padding:0; list-style:none; display:grid; gap:13px">
+        <li style="display:grid; grid-template-columns:auto 1fr; gap:13px; font-size:15px; line-height:1.65; color:#b3ada6"><span style="width:5px; height:5px; margin-top:9px; background:#7a736c"></span><span>Призыв стоит одного хода, дальше питомец сражается сам.</span></li>
+        <li style="display:grid; grid-template-columns:auto 1fr; gap:13px; font-size:15px; line-height:1.65; color:#b3ada6"><span style="width:5px; height:5px; margin-top:9px; background:#7a736c"></span><span>Связь крепнет в боях: семь ступеней, а на четвёртой вы выбираете, кем существо станет.</span></li>
+        <li style="display:grid; grid-template-columns:auto 1fr; gap:13px; font-size:15px; line-height:1.65; color:#b3ada6"><span style="width:5px; height:5px; margin-top:9px; background:#7a736c"></span><span>У каждого свои склонности, поэтому даже два одинаковых питомца вырастают разными.</span></li>
+        <li style="display:grid; grid-template-columns:auto 1fr; gap:13px; font-size:15px; line-height:1.65; color:#b3ada6"><span style="width:5px; height:5px; margin-top:9px; background:#7a736c"></span><span>Выше вашего Ранга питомец не поднимется.</span></li>
+      </ul>
+      <div style="margin-top:30px; padding:18px 20px; border-left:2px solid #b5544e; background:rgba(181,84,78,.06); font-size:14.5px; line-height:1.65; color:#b3ada6">Смерть отнимает часть Фрагментов души и незащищённые вещи. Привязанное и защищённое остаётся с вами.</div>
+    </div>
+  </div>
+</section>
+
+<section id="world" data-reveal data-screen-label="World" style="padding:110px 0; border-bottom:1px solid rgba(255,255,255,.06)">
+  <div style="max-width:1240px; margin:0 auto; padding:0 32px">
+    <p style="margin:0 0 10px; font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:#d08b83">Мир</p>
+    <h2 style="margin:0 0 14px; font-family:Cardo, Georgia, serif; font-weight:400; font-size:clamp(30px,4.2vw,50px); line-height:1.1; color:#f4f1eb">Восемь регионов</h2>
+    <p style="margin:0 0 46px; max-width:620px; font-size:17px; line-height:1.7; color:#a6a09a; text-wrap:pretty">У каждого края свой характер и свои существа. Дорогу в соседний регион никто не покажет.</p>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:1px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.08)">
+      <div style="background:#0d0c11; padding:26px 24px; display:grid; gap:8px; transition:background .3s ease" class="x511"><span style="font-family:ui-monospace, 'Courier New', monospace; font-size:11px; color:#6f6963">01</span><span style="font-family:Cardo, Georgia, serif; font-size:22px; color:#f2efe9">Царство Теней</span></div>
+      <div style="background:#0d0c11; padding:26px 24px; display:grid; gap:8px; transition:background .3s ease" class="x512"><span style="font-family:ui-monospace, 'Courier New', monospace; font-size:11px; color:#6f6963">02</span><span style="font-family:Cardo, Georgia, serif; font-size:22px; color:#f2efe9">Чёрная пустыня</span></div>
+      <div style="background:#0d0c11; padding:26px 24px; display:grid; gap:8px; transition:background .3s ease" class="x513"><span style="font-family:ui-monospace, 'Courier New', monospace; font-size:11px; color:#6f6963">03</span><span style="font-family:Cardo, Georgia, serif; font-size:22px; color:#f2efe9">Штормовое море</span></div>
+      <div style="background:#0d0c11; padding:26px 24px; display:grid; gap:8px; transition:background .3s ease" class="x514"><span style="font-family:ui-monospace, 'Courier New', monospace; font-size:11px; color:#6f6963">04</span><span style="font-family:Cardo, Georgia, serif; font-size:22px; color:#f2efe9">Коралловый лабиринт</span></div>
+      <div style="background:#0d0c11; padding:26px 24px; display:grid; gap:8px; transition:background .3s ease" class="x515"><span style="font-family:ui-monospace, 'Courier New', monospace; font-size:11px; color:#6f6963">05</span><span style="font-family:Cardo, Georgia, serif; font-size:22px; color:#f2efe9">Забытый берег</span></div>
+      <div style="background:#0d0c11; padding:26px 24px; display:grid; gap:8px; transition:background .3s ease" class="x516"><span style="font-family:ui-monospace, 'Courier New', monospace; font-size:11px; color:#6f6963">06</span><span style="font-family:Cardo, Georgia, serif; font-size:22px; color:#f2efe9">Цепные острова</span></div>
+      <div style="background:#0d0c11; padding:26px 24px; display:grid; gap:8px; transition:background .3s ease" class="x517"><span style="font-family:ui-monospace, 'Courier New', monospace; font-size:11px; color:#6f6963">07</span><span style="font-family:Cardo, Georgia, serif; font-size:22px; color:#f2efe9">Лунное Царство</span></div>
+      <div style="background:#0d0c11; padding:26px 24px; display:grid; gap:8px; transition:background .3s ease" class="x518"><span style="font-family:ui-monospace, 'Courier New', monospace; font-size:11px; color:#6f6963">08</span><span style="font-family:Cardo, Georgia, serif; font-size:22px; color:#f2efe9">Полые горы</span></div>
+    </div>
+    <div style="margin-top:22px; padding:18px 20px; border-left:2px solid #8a6cc0; background:rgba(138,108,192,.07); font-size:14.5px; line-height:1.65; color:#b3ada6">В Царстве Теней бродят отражения существ, убитых в других краях. Мир помнит каждую смерть.</div>
+    <div style="margin-top:30px"><span style="font-size:14.5px; cursor:default">Мир и лор в вики →</span></div>
+  </div>
+</section>
+
+<section data-reveal data-screen-label="CTA" style="padding:104px 0; background:#0d0c11; border-bottom:1px solid rgba(255,255,255,.06)">
+  <div style="max-width:1240px; margin:0 auto; padding:0 32px; display:flex; gap:40px; align-items:center; flex-wrap:wrap">
+    <div>
+      <h2 style="margin:0; max-width:620px; font-family:Cardo, Georgia, serif; font-weight:400; font-size:clamp(28px,3.6vw,44px); line-height:1.12; color:#f4f1eb; text-wrap:pretty">Мир Кошмаров уже открыт. Присоединяйтесь.</h2>
+      <p style="margin:16px 0 0; max-width:520px; font-size:16.5px; line-height:1.7; color:#a6a09a">Игра идёт в Telegram, начать можно за минуту.</p>
+    </div>
+    <a href="https://t.me/nightmare_spire_mmorpg_bot" target="_blank" rel="noopener" style="margin-left:auto; padding:18px 34px; background:#a03f39; color:#fbf7f4; font-size:14px; font-weight:600; letter-spacing:.06em; text-transform:uppercase" class="x519">Открыть бота</a>
+  </div>
+</section>
+
+<footer data-reveal style="padding:76px 0 42px; background:#0c0b0f">
+  <div style="max-width:1240px; margin:0 auto; padding:0 32px; display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:44px">
+    <div>
+      <div style="font-family:Cardo, Georgia, serif; font-size:22px; color:#f2efe9">Nightmare</div>
+      <p style="margin:14px 0 0; font-size:14px; line-height:1.7; color:#7d7873; max-width:280px">Официальный сайт и база знаний по двум Telegram-играм одного разработчика.</p>
+    </div>
+    <div>
+      <div style="font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:#d08b83; margin-bottom:16px">Игры</div>
+      <div style="display:flex; flex-direction:column; gap:11px; font-size:14.5px">
+        <span style="color:#f2efe9">Nightmare Spire</span>
+        <span style="color:#948e88">Nightmare Dream, в разработке</span>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:#d08b83; margin-bottom:16px">Вики</div>
+      <div style="display:flex; flex-direction:column; gap:11px; font-size:14.5px">
+        <a href="#world" style="color:#a6a09a" class="x520">Мир</a>
+        <a href="#mechanics" style="color:#a6a09a" class="x521">Механики</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11.5px; letter-spacing:.18em; text-transform:uppercase; color:#d08b83; margin-bottom:16px">Играть</div>
+      <div style="display:flex; flex-direction:column; gap:11px; font-size:14.5px">
+        <a href="https://t.me/nightmare_spire_mmorpg_bot" target="_blank" rel="noopener" style="color:#a6a09a" class="x522">@nightmare_spire_mmorpg_bot</a>
+        <a href="https://t.me/trykablog" style="color:#a6a09a" class="x523">Блог разработки</a>
+      </div>
+    </div>
+  </div>
+  <div style="max-width:1240px; margin:48px auto 0; padding:22px 32px 0; border-top:1px solid rgba(255,255,255,.06); display:flex; gap:20px; flex-wrap:wrap; font-size:13px; color:#6f6963">
+    <span>© 2026 Nightmare Dream</span>
+    <span style="margin-left:auto">nightmaredream.online</span>
+  </div>
+</footer>
+
+</div>
+
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
