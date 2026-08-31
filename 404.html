@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Портал закрыт — Nightmare</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0a090d">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  @keyframes flicker {
+    0%, 100% { opacity: .1; }
+    42% { opacity: .1; }
+    44% { opacity: .28; }
+    46% { opacity: .12; }
+    52% { opacity: .32; }
+    54% { opacity: .1; }
+    78% { opacity: .22; }
+    80% { opacity: .1; }
+  }
+  @keyframes emberRise {
+    from { transform: translateY(0) scale(1); opacity: 0; }
+    12% { opacity: .7; }
+    to { transform: translateY(-160px) scale(.4); opacity: 0; }
+  }
+  .e404-num { animation: flicker 7s ease-in-out infinite; }
+  .e404-cta:hover { background: #b5544e !important; transform: translateY(-3px); }
+  .e404-ghost:hover { border-color: rgba(255,255,255,.45) !important; color: #f6f3ed !important; }
+  .e404-link:hover { color: #f2efe9 !important; }
+  @media (max-width: 720px) { .e404-num { font-size: 34vw !important; } }
+</style>
+</head>
+<body>
+<div style="position:relative; min-height:100vh; display:flex; flex-direction:column; overflow:hidden; background:#0a090d">
+
+  <div style="position:absolute; inset:0; background:#0b0a10 url('assets/img/hero.png') center 40%/cover no-repeat; filter:saturate(.55) brightness(.5); animation:slowZoom 40s ease-in-out infinite alternate"></div>
+  <div style="position:absolute; inset:0; background:linear-gradient(180deg, rgba(10,9,13,.82) 0%, rgba(10,9,13,.88) 45%, rgba(10,9,13,.97) 100%)"></div>
+  <div style="position:absolute; left:-10%; right:-10%; bottom:-15%; height:65%; background:radial-gradient(45% 60% at 40% 70%, rgba(140,130,180,.16), rgba(0,0,0,0) 70%); filter:blur(22px); animation:fogDrift 38s ease-in-out infinite"></div>
+
+  <span aria-hidden="true" class="e404-num" style="position:absolute; left:50%; top:47%; transform:translate(-50%,-50%); font-family:Cardo, Georgia, serif; font-size:min(30vw, 380px); line-height:1; color:#b5544e; letter-spacing:.04em; pointer-events:none; user-select:none">404</span>
+
+  <div id="embers" aria-hidden="true" style="position:absolute; inset:0; pointer-events:none"></div>
+
+  <header style="position:relative; z-index:5">
+    <div style="max-width:1240px; margin:0 auto; padding:22px 32px">
+      <a href="index.html" style="font-family:Cardo, Georgia, serif; font-size:21px; letter-spacing:.02em; color:#f2efe9">Nightmare</a>
+    </div>
+  </header>
+
+  <main style="position:relative; z-index:5; flex:1; display:grid; place-content:center; text-align:center; padding:40px 32px 20px">
+    <p style="margin:0 0 20px; font-family:ui-monospace,'Courier New',monospace; font-size:11.5px; letter-spacing:.24em; text-transform:uppercase; color:#8d8781">Страница не найдена</p>
+    <h1 style="margin:0; font-family:Cardo, Georgia, serif; font-weight:400; font-size:clamp(38px,6.5vw,80px); line-height:1.02; color:#f6f3ed">Кажется, портал закрыт</h1>
+    <p style="margin:26px auto 0; max-width:480px; font-family:Cardo, Georgia, serif; font-style:italic; font-size:19px; line-height:1.65; color:#a6a09a">Попробуйте позже</p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-top:38px">
+      <a href="index.html" class="e404-cta" style="padding:16px 30px; background:#a03f39; color:#fbf7f4; font-size:13.5px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; transition:transform .25s cubic-bezier(.16,.84,.44,1), background .25s ease">Вернуться на главную</a>
+      <a href="nightmare-spire/index.html" class="e404-ghost" style="padding:16px 30px; border:1px solid rgba(255,255,255,.22); color:#e6e2db; font-size:13.5px; letter-spacing:.08em; text-transform:uppercase; transition:border-color .25s ease, color .25s ease">Nightmare Spire</a>
+    </div>
+  </main>
+
+  <footer style="position:relative; z-index:5; padding:0 0 40px">
+    <div style="max-width:1240px; margin:0 auto; padding:0 32px; display:flex; gap:22px; flex-wrap:wrap; font-size:13px; color:#7a736c">
+      <a href="changelog/index.html" class="e404-link" style="color:#8d8781">Обновления</a>
+      <a href="https://t.me/nightmare_spire_mmorpg_bot" target="_blank" rel="noopener" class="e404-link" style="color:#8d8781">Играть в Telegram</a>
+      <a href="https://t.me/trykablog" target="_blank" rel="noopener" class="e404-link" style="color:#8d8781">Блог разработки</a>
+      <span style="margin-left:auto">nightmaredream.online</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var host = document.getElementById('embers');
+  if (!host) return;
+  for (var i = 0; i < 14; i++) {
+    var s = document.createElement('span');
+    var size = 1 + Math.random() * 2;
+    s.style.cssText = 'position:absolute; bottom:' + (Math.random() * 30) + '%; left:' + (Math.random() * 100) + '%; width:' + size + 'px; height:' + size + 'px; border-radius:50%; background:#c9776d; animation:emberRise ' + (9 + Math.random() * 10).toFixed(1) + 's linear ' + (Math.random() * 12).toFixed(1) + 's infinite';
+    host.appendChild(s);
+  }
+})();
+</script>
+</body>
+</html>
