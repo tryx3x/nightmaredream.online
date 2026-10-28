@@ -91,3 +91,6 @@ button { font-family: inherit; }
 /* Changelog date rail: scrolls on its own, independent of the page */
 .cl-nav { overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.18) transparent; }
 .cl-nav a.cl-on { color: #f2efe9 !important; border-bottom-color: #b5544e !important; }
+
+/* Keep the header gradient out of its 1px border, otherwise the gradient's dark top repeats there as a thin line */
+#c-header { background-clip: padding-box !important; }
