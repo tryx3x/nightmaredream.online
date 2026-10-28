@@ -88,11 +88,6 @@ button { font-family: inherit; }
 .xh3:hover{color:#f2efe9 !important}
 .xh4:hover{background:#b5544e !important; transform:translateY(-2px)}
 
-/* Changelog date rail: scrolls on desktop, becomes a horizontal strip on phones */
+/* Changelog date rail: scrolls on its own, independent of the page */
 .cl-nav { overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: rgba(255,255,255,.18) transparent; }
 .cl-nav a.cl-on { color: #f2efe9 !important; border-bottom-color: #b5544e !important; }
-@media (max-width: 900px) {
-  .cl-nav { position: static !important; max-height: none !important; display: flex; gap: 0 18px; overflow-x: auto; padding: 0 0 6px !important; white-space: nowrap; }
-  .cl-nav > div { display: none; }
-  .cl-nav a { flex: none; }
-}
