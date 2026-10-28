@@ -55,6 +55,31 @@
     }
   });
 
+  var clNav = document.querySelector('.cl-nav');
+  if (clNav && 'IntersectionObserver' in window) {
+    var clLinks = {};
+    clNav.querySelectorAll('a[href^="#"]').forEach(function (a) { clLinks[a.getAttribute('href').slice(1)] = a; });
+    var clOn = null;
+    var clIo = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        var a = clLinks[e.target.id];
+        if (!a || a === clOn) return;
+        if (clOn) clOn.classList.remove('cl-on');
+        clOn = a;
+        a.classList.add('cl-on');
+        // Keep the highlighted date visible inside the rail without moving the page.
+        var top = a.offsetTop - clNav.offsetTop;
+        if (top < clNav.scrollTop || top > clNav.scrollTop + clNav.clientHeight - a.offsetHeight) {
+          clNav.scrollTop = top - clNav.clientHeight / 2;
+        }
+        var left = a.offsetLeft - clNav.offsetLeft;
+        if (clNav.scrollWidth > clNav.clientWidth) clNav.scrollLeft = left - clNav.clientWidth / 2;
+      });
+    }, { rootMargin: '-100px 0px -70% 0px' });
+    document.querySelectorAll('article[id]').forEach(function (el) { clIo.observe(el); });
+  }
+
   document.addEventListener('click', function (ev) {
     var g = document.getElementById('games-menu');
     if (g && !g.hidden && !ev.target.closest('#games-menu') && !ev.target.closest('[data-act="games"]')) g.hidden = true;
